@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffe4ef">
+<title>My Little Batgirl ♡</title>
+<style>
+:root{--pink:#ff72a8;--deep:#d93679;--ink:#593348;--soft:#fff5f9;--line:#ffd0e2}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:var(--ink);background:radial-gradient(circle at 15% 10%,#fff 0 8%,transparent 30%),linear-gradient(145deg,#ffe8f1,#ffd6e7 55%,#fff0f6);min-height:100vh;overflow-x:hidden}
+main{width:min(760px,92%);margin:auto;padding:28px 0 60px}
+.hero{text-align:center;padding:35px 18px 25px}
+.bat{font-size:44px;filter:drop-shadow(0 5px 10px #ed8db755)}
+h1{font-size:clamp(2.2rem,8vw,4rem);line-height:1.05;margin:10px 0;color:#c72f70}
+.sub{font-size:1.05rem;opacity:.85}
+.pill{display:inline-block;background:#fff9fc;border:1px solid var(--line);border-radius:99px;padding:8px 14px;font-size:.9rem;margin-top:12px}
+.card{background:#ffffffd9;border:1px solid #fff;border-radius:24px;padding:22px;margin:16px 0;box-shadow:0 12px 35px #bd54801a;backdrop-filter:blur(8px)}
+h2{margin:0 0 12px;color:#c72f70;font-size:1.35rem}
+p{line-height:1.65}
+button{border:0;border-radius:999px;background:linear-gradient(135deg,#ff83b3,#e64b8c);color:white;font-weight:700;padding:13px 20px;font-size:1rem;cursor:pointer;box-shadow:0 7px 16px #e64b8c35}
+button:active{transform:scale(.98)}
+.secondary{background:#fff;color:#c72f70;border:1px solid var(--line);box-shadow:none}
+.center{text-align:center}
+.hidden{display:none}
+.letter{background:#fff8fb;border:1px dashed #f3a5c4;border-radius:18px;padding:18px;white-space:pre-line}
+.reasons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;padding:0;list-style:none}
+.reasons li{background:#fff7fa;border:1px solid #ffe0eb;border-radius:14px;padding:11px;font-size:.93rem}
+.reasons li b{color:#df4d8b;margin-right:5px}
+.surprise{font-size:1.15rem;text-align:center;padding:18px;background:#fff5f9;border-radius:18px}
+footer{text-align:center;font-size:.85rem;opacity:.7;padding:20px}
+.heart{position:fixed;pointer-events:none;animation:float 5s linear forwards;opacity:.75;z-index:5}
+@keyframes float{from{transform:translateY(20px) scale(.7);opacity:0}15%{opacity:.8}to{transform:translateY(-110vh) translateX(25px) scale(1.2);opacity:0}}
+@media(max-width:480px){.reasons{grid-template-columns:1fr}.card{padding:18px}.hero{padding-top:24px}}
+</style>
+</head>
+<body>
+<main>
+  <header class="hero">
+    <div class="bat">🦇💗</div>
+    <h1>My Little Batgirl</h1>
+    <div class="sub">A tiny corner of the internet, made just for you.</div>
+    <div class="pill" id="countdown">Counting down to November 16…</div>
+  </header>
+
+  <section class="card">
+    <h2>💌 A little letter for you</h2>
+    <p>There are a million things I could say, but here's the most important one: I'm really glad you're in my life. Even with the distance between us, you still make my days brighter. I hope this little page reminds you how loved, appreciated, and special you are.</p>
+    <div class="center"><button id="letterBtn">Open your secret letter</button></div>
+    <div id="letter" class="letter hidden" style="margin-top:16px">Hey, Batgirl! ♡
+
+I may not always be right beside you, but I'm cheering for you from wherever I am. Your smile, your style, and the little things that make you YOU are all lovely. Keep being your wonderfully unique self.
+
+Happy almost-birthday! I hope November 16 brings you the happiest kind of surprises.
+
+— Someone who cares about you 💗</div>
+  </section>
+
+  <section class="card">
+    <h2>❤️ 75 little reasons you're special</h2>
+    <p>Here are 75 sweet reminders. You can change any line to make it more personal.</p>
+    <ol class="reasons" id="reasons"></ol>
+  </section>
+
+  <section class="card">
+    <h2>🎁 One last surprise</h2>
+    <p class="center">There's a little birthday wish waiting for you.</p>
+    <div class="center"><button id="surpriseBtn">Tap for your surprise ✨</button></div>
+    <div id="surprise" class="surprise hidden" style="margin-top:15px">🎂 Happy Birthday for November 16, Batgirl! 🦇<br><br>May your year be full of laughter, confidence, good friends, exciting dreams, and a hundred reasons to smile. You deserve lovely things. 💗</div>
+  </section>
+  <footer>Made with care, just for you ♡</footer>
+</main>
+<script>
+const lines = [
+"Your smile can brighten an ordinary day.","You make conversations feel special.","You have your own kind of sparkle.","Your laugh is contagious.","You are thoughtful in little ways.",
+"You make distance feel a little smaller.","You have a lovely sense of style.","You bring good energy with you.","You are wonderfully unique.","You deserve to feel appreciated.",
+"You make simple moments memorable.","You have a kind heart.","You keep being yourself.","You make people feel noticed.","You have dreams worth chasing.",
+"Your messages can make a day better.","You are stronger than you think.","You have a beautiful way of expressing yourself.","You make the world a little brighter.","You are worth celebrating.",
+"You have your own special charm.","You can make someone smile without trying.","You are a one-of-a-kind person.","You deserve kindness every day.","You have so much potential.",
+"You make memories worth keeping.","You are fun to talk to.","You have a lovely personality.","You are more than enough as you are.","You make ordinary days feel less ordinary.",
+"You have a special place in my thoughts.","You bring warmth to conversations.","You have a creative side.","You are brave enough to grow.","You deserve to be proud of yourself.",
+"You have a way of making things interesting.","You are easy to appreciate.","You make little things matter.","You have a bright future ahead.","You deserve all the good things you work for.",
+"You are full of surprises.","You have a gentle kind of magic.","You make people feel welcome.","You are fun in your own way.","You have a lovely smile.",
+"You are learning and growing every day.","You have your own beautiful style.","You make kindness look cool.","You are someone worth cheering for.","You make this world more interesting.",
+"You deserve happy moments.","You have a heart full of possibilities.","You are appreciated more than you know.","You make even a short chat count.","You have a special glow.",
+"You are allowed to take up space and be yourself.","You deserve respect and care.","You make memories feel golden.","You have so many reasons to believe in yourself.","You are a lovely person to know.",
+"You bring a little sunshine with you.","You have your own way of making people smile.","You deserve patience and understanding.","You are more than any bad day.","You have a lot to look forward to.",
+"You make being yourself look effortless.","You are worth every kind word.","You have a wonderful story still unfolding.","You deserve to feel celebrated.","You are special without needing to prove it.",
+"You make the distance worth being patient through.","You are a bright part of someone's day.","You deserve a birthday full of joy.","You are simply you — and that's lovely.","Because you're my Batgirl. ♡"
+];
+const list=document.getElementById('reasons');
+lines.forEach((line,i)=>{const li=document.createElement('li');li.innerHTML='<b>'+(i+1)+'.</b> '+line;list.appendChild(li)});
+document.getElementById('letterBtn').addEventListener('click',()=>{document.getElementById('letter').classList.toggle('hidden')});
+document.getElementById('surpriseBtn').addEventListener('click',()=>{document.getElementById('surprise').classList.remove('hidden');for(let i=0;i<18;i++){setTimeout(makeHeart,i*90)}});
+function makeHeart(){const h=document.createElement('div');h.className='heart';h.textContent=['💗','💕','♡','🦇'][Math.floor(Math.random()*4)];h.style.left=Math.random()*100+'vw';h.style.bottom='-25px';h.style.fontSize=(18+Math.random()*20)+'px';document.body.appendChild(h);setTimeout(()=>h.remove(),5200)}
+const target=new Date('2026-11-16T00:00:00+05:30');
+function updateCountdown(){const now=new Date();const diff=target-now;const el=document.getElementById('countdown');if(diff<=0){el.textContent='It’s November 16 — happy birthday, Batgirl! 🎂';return}const days=Math.floor(diff/86400000);const hours=Math.floor(diff%86400000/3600000);el.textContent=`${days} days, ${hours} hours until November 16 🎂`}
+updateCountdown();setInterval(updateCountdown,60000);
+setInterval(()=>{if(Math.random()>.45)makeHeart()},1500);
+</script>
+</body>
+</html>
