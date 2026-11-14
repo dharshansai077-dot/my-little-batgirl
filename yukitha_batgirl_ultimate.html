@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#100b18">
+<title>Yukitha • My Batgirl ♡</title>
+<style>
+:root{--bg:#100b18;--panel:#1b1225;--pink:#ff80b5;--hot:#ff4f9a;--cream:#fff1f7;--muted:#cbb7c8;--line:#ffffff1c}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at 50% -15%,#592344 0,transparent 48%),var(--bg);color:var(--cream);font-family:system-ui,-apple-system,Segoe UI,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;background-image:radial-gradient(#fff 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,#000,transparent 85%)}
+main{width:min(900px,92%);margin:auto;padding:28px 0 70px;position:relative}
+nav{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:.88rem;padding:8px 2px}
+.brand{letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--pink)}
+nav a{color:var(--muted);text-decoration:none;margin-left:15px}
+.hero{text-align:center;padding:74px 12px 52px}
+.kicker{display:inline-block;border:1px solid #ff80b555;border-radius:99px;padding:8px 14px;color:#ffc4dc;background:#ff80b510;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase}
+.bat{font-size:48px;margin:20px 0 8px;filter:drop-shadow(0 0 20px #ff4f9a77)}
+h1{font-family:Georgia,serif;font-weight:500;font-size:clamp(3rem,11vw,6rem);line-height:.98;letter-spacing:-.045em;margin:10px 0;color:#fff0f7}
+h1 span{color:var(--pink);font-style:italic}
+.subtitle{color:var(--muted);font-size:1.05rem;max-width:520px;margin:18px auto;line-height:1.7}
+.countbox{margin:30px auto 0;max-width:560px;padding:20px;border:1px solid #ff80b544;border-radius:22px;background:linear-gradient(135deg,#ff80b51b,#ffffff08);box-shadow:0 18px 70px #0005}
+.countlabel{color:#ffc1da;text-transform:uppercase;letter-spacing:.15em;font-size:.72rem}
+.countdown{display:flex;justify-content:center;gap:10px;margin-top:14px;flex-wrap:wrap}
+.time{min-width:78px;padding:12px 10px;background:#0e0915aa;border:1px solid var(--line);border-radius:15px}
+.time strong{display:block;font-size:1.8rem;color:white;font-variant-numeric:tabular-nums}
+.time small{color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:.1em}
+.section{margin:22px 0;padding:clamp(22px,5vw,38px);border:1px solid var(--line);border-radius:26px;background:linear-gradient(145deg,#24172dE8,#17101fF2);box-shadow:0 20px 60px #0003}
+.eyebrow{color:var(--pink);font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;font-weight:800}
+h2{font:500 clamp(1.8rem,5vw,2.5rem) Georgia,serif;margin:8px 0 14px}
+p{line-height:1.8;color:#e4d3df}
+.soft{color:var(--muted)}
+.btn{border:0;border-radius:999px;padding:13px 21px;background:linear-gradient(120deg,var(--pink),var(--hot));color:#230e1b;font-weight:800;font-size:.95rem;cursor:pointer;box-shadow:0 8px 28px #ff4f9a35}
+.btn.secondary{background:#ffffff0b;color:#ffd9e9;border:1px solid #ff80b555;box-shadow:none}
+.actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+.letter{margin-top:20px;padding:22px;border-radius:18px;background:#fff5fa;color:#49263a;white-space:pre-line;line-height:1.9;border:1px solid #ffd0e2}
+.hidden{display:none!important}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:20px}
+.reason{padding:17px;border:1px solid #ff80b52b;border-radius:17px;background:#ffffff08;min-height:110px}
+.reason b{display:block;color:var(--pink);font-size:.78rem;margin-bottom:8px;letter-spacing:.08em}
+.reason span{color:#f4e6ef;line-height:1.55;font-size:.93rem}
+.memory{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+.memory div{border:1px dashed #ff80b566;background:#ff80b50a;border-radius:18px;padding:18px;color:#f5dce8;line-height:1.6}
+.bigwish{text-align:center;padding:25px;border-radius:20px;background:linear-gradient(135deg,#ff80b51b,#9f4d9c18);border:1px solid #ff80b544;margin-top:18px}
+.bigwish .cake{font-size:46px}
+footer{text-align:center;color:#9f8b9d;padding:35px 10px 10px;font-size:.82rem}
+.float{position:fixed;bottom:-35px;pointer-events:none;z-index:9;animation:rise 5s linear forwards}
+@keyframes rise{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+@media(max-width:620px){.hero{padding-top:52px}.grid{grid-template-columns:1fr 1fr}.memory{grid-template-columns:1fr}.time{min-width:68px}.time strong{font-size:1.5rem}nav a{margin-left:8px}}
+@media(max-width:380px){.grid{grid-template-columns:1fr}.countdown{gap:6px}.time{min-width:62px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}
+
+/* Cinematic upgrade */
+body:after{content:"";position:fixed;inset:-20%;pointer-events:none;background:conic-gradient(from 220deg at 50% 45%,transparent 0 18%,#ff80b512 19% 22%,transparent 23% 100%);animation:signal 8s linear infinite;z-index:-1}
+@keyframes signal{to{transform:rotate(360deg)}}
+.signal{width:190px;height:95px;margin:26px auto 4px;position:relative;filter:drop-shadow(0 0 24px #ff80b5aa)}
+.signal:before{content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);width:0;height:0;border-left:95px solid transparent;border-right:95px solid transparent;border-bottom:95px solid #ff80b50d}
+.signal .batshape{font-size:62px;position:absolute;inset:7px 0 0;text-align:center}
+.reveal{opacity:0;transform:translateY(22px);transition:.8s ease}
+.reveal.show{opacity:1;transform:none}
+.meter{height:8px;background:#ffffff10;border-radius:99px;overflow:hidden;margin:16px 0}
+.meter i{display:block;width:0;height:100%;background:linear-gradient(90deg,var(--pink),#c18cff,var(--hot));transition:width 1.2s ease}
+.mission{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:18px}
+.clue{flex:1;min-width:180px;padding:16px;border:1px solid #ff80b544;border-radius:16px;background:#ffffff08}
+.clue strong{display:block;color:var(--pink);font-size:.78rem;letter-spacing:.12em;margin-bottom:6px}
+@media(max-width:620px){.signal{margin-top:16px}}
+</style>
+</head>
+<body>
+<main>
+<nav><div class="brand">♡ Yukitha • My Batgirl</div><div><a href="#letter">Letter</a><a href="#distance">Distance</a><a href="#mission">Mission</a><a href="#reasons">Reasons</a></div></nav>
+
+<header class="hero">
+  <div class="kicker">A tiny website made just for you</div>
+  <div class="signal"><div class="batshape">🦇 💗</div></div>
+  <h1>My Little<br><span>Yukitha</span></h1>
+  <p class="subtitle">For my Batgirl, Yukitha — even when we are far apart, this little corner of the internet is our own tiny Gotham.</p>
+  <div class="countbox">
+    <div class="countlabel">The countdown to your day · 18 November</div>
+    <div class="countdown" id="countdown">
+      <div class="time"><strong id="days">--</strong><small>Days</small></div>
+      <div class="time"><strong id="hours">--</strong><small>Hours</small></div>
+      <div class="time"><strong id="minutes">--</strong><small>Minutes</small></div>
+      <div class="time"><strong id="seconds">--</strong><small>Seconds</small></div>
+    </div>
+    <p id="countMessage" class="soft" style="margin:14px 0 0;font-size:.9rem">A special day is getting closer ✨</p>
+  </div>
+</header>
+
+<section class="section" id="letter">
+  <div class="eyebrow">01 · A note for my Batgirl</div>
+  <h2>A little letter 💌</h2>
+  <p class="soft">A few words, saved here just for your special day.</p>
+  <div class="actions"><button class="btn" id="openLetter">Open your letter</button></div>
+  <div class="letter hidden" id="letterText">Hey, Yukitha — my Batgirl! ♡
+
+I hope this little surprise makes you smile. Thank you for being your own wonderful self and for adding some memorable moments to the days around you.
+
+Keep chasing the things that make you happy, keep laughing loudly, and never forget how much you are appreciated.
+
+Wishing you a birthday filled with happiness, good memories, and all your favourite things.
+
+— From the person cheering for you from the other side of the distance 💗</div>
+</section>
+
+
+<section class="section reveal" id="distance">
+  <div class="eyebrow">02 · Across the distance</div>
+  <h2>Two places. One little world. 🌙</h2>
+  <p class="soft">Long distance can put miles between two people, but it does not have to make a birthday feel far away.</p>
+  <div class="memory">
+    <div>🦇 <b>BAT-SIGNAL</b><br>Whenever you see this little signal, think of it as a tiny reminder that someone is celebrating you.</div>
+    <div>💗 <b>YUKITHA SIGNAL</b><br>18 November is our special checkpoint — your birthday deserves its own spotlight.</div>
+    <div>📡 <b>FROM MY SIDE</b><br>A message can cross the distance instantly, even when I cannot be there in person.</div>
+    <div>✨ <b>TO YOUR SIDE</b><br>Open every surprise, smile at the screen, and let this tiny Gotham be your birthday corner.</div>
+  </div>
+</section>
+
+<section class="section reveal" id="mission">
+  <div class="eyebrow">02 · Gotham mission</div>
+  <h2>A little secret mission 🕵️</h2>
+  <p class="soft">Batgirl has one final case: unlock the birthday signal.</p>
+  <div class="clue">
+    <strong>CASE FILE · 18 / 11</strong>
+    <span>Every great birthday deserves a hidden moment. Tap the button to decrypt it.</span>
+  </div>
+  <div class="meter"><i id="meter"></i></div>
+  <div class="mission">
+    <button class="btn" id="decode">Decrypt the signal</button>
+    <span id="caseStatus" class="soft">Status: encrypted 🔒</span>
+  </div>
+  <div class="letter hidden" id="decoded">SIGNAL DECRYPTED ✦
+
+Gotham is quiet. The lights are waiting. The birthday girl has been identified.
+
+Your mission is simple: smile, celebrate, and make 18 November unforgettable. 🦇💗</div>
+</section>
+
+<section class="section reveal">
+  <div class="eyebrow">03 · The Batgirl vault</div>
+  <h2>Three little birthday drops 🎁</h2>
+  <p class="soft">Each box reveals a tiny piece of the final celebration.</p>
+  <div class="grid">
+    <button class="reason" onclick="drop(this,'✨ A year full of new adventures is waiting.')"><b>DROP 01</b><span>Tap to unlock</span></button>
+    <button class="reason" onclick="drop(this,'💗 You are officially allowed to make today all about happiness.')"><b>DROP 02</b><span>Tap to unlock</span></button>
+    <button class="reason" onclick="drop(this,'🦇 Bat-Signal rule: birthday wishes must be bigger than yesterday.')"><b>DROP 03</b><span>Tap to unlock</span></button>
+  </div>
+</section>
+
+<section class="section" id="reasons">
+  <div class="eyebrow">05 · Why my Batgirl is special</div>
+  <h2>Little things worth celebrating ✨</h2>
+  <p class="soft">A few reminders that make you, you. Swap these with your own memories if you want.</p>
+  <div class="grid">
+    <div class="reason"><b>01 / YOUR ENERGY</b><span>You bring your own sparkle wherever you go.</span></div>
+    <div class="reason"><b>02 / YOUR LAUGH</b><span>It can turn a normal moment into a good memory.</span></div>
+    <div class="reason"><b>03 / YOUR STYLE</b><span>You have a way of being completely yourself.</span></div>
+    <div class="reason"><b>04 / YOUR KINDNESS</b><span>The little thoughtful things matter.</span></div>
+    <div class="reason"><b>05 / YOUR DREAMS</b><span>May you get closer to every goal you care about.</span></div>
+    <div class="reason"><b>06 / JUST YOU</b><span>You deserve to be celebrated exactly as you are.</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="eyebrow">06 · Birthday wishes across the miles</div>
+  <h2>For your next chapter 🌙</h2>
+  <div class="memory">
+    <div>✦ More days that make you laugh until your cheeks hurt.</div>
+    <div>✦ New memories, kind people, and exciting little adventures.</div>
+    <div>✦ Confidence to try things you have been dreaming about.</div>
+    <div>✦ Plenty of reasons to feel proud of yourself.</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="eyebrow">07 · The final Bat-Signal</div>
+  <h2>One last little surprise 🎁</h2>
+  <p class="soft">Save this one for the birthday reveal.</p>
+  <div class="actions"><button class="btn" id="surpriseBtn">Open the birthday surprise ✨</button></div>
+  <div class="bigwish hidden" id="surprise">
+    <div class="cake">🎂</div>
+    <h2>Happy Birthday, Batgirl!</h2>
+    <p>18 November is your day. Even from far away, I hope this birthday brings you happiness, laughter, good surprises, and memories you'll want to keep forever.</p>
+    <div style="font-size:1.5rem">🦇 💗 ✨</div>
+  </div>
+</section>
+
+<footer>Made with care, just for you ♡<br><span>18 · 11 · 2026</span></footer>
+</main>
+<script>
+const target = new Date('2026-11-18T00:00:00+05:30');
+const $ = id => document.getElementById(id);
+function updateCountdown(){
+  const now = new Date();
+  let diff = target - now;
+  if(diff <= 0){
+    ['days','hours','minutes','seconds'].forEach(id => $(id).textContent = '00');
+    $('countMessage').textContent = 'It’s your day — happy birthday, Batgirl! 🎂';
+    return;
+  }
+  const d = Math.floor(diff / 86400000); diff %= 86400000;
+  const h = Math.floor(diff / 3600000); diff %= 3600000;
+  const m = Math.floor(diff / 60000); diff %= 60000;
+  const s = Math.floor(diff / 1000);
+  $('days').textContent = String(d).padStart(2,'0');
+  $('hours').textContent = String(h).padStart(2,'0');
+  $('minutes').textContent = String(m).padStart(2,'0');
+  $('seconds').textContent = String(s).padStart(2,'0');
+}
+updateCountdown(); setInterval(updateCountdown,1000);
+$('openLetter').addEventListener('click',()=>{
+  const letter=$('letterText'); letter.classList.toggle('hidden');
+  $('openLetter').textContent=letter.classList.contains('hidden')?'Open your letter':'Close your letter';
+});
+function floatHearts(amount=24){
+  const symbols=['♡','💗','✦','💕','🦇','📡'];
+  for(let i=0;i<amount;i++){
+    const el=document.createElement('span'); el.className='float';
+    el.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+    el.style.left=Math.random()*100+'vw';
+    el.style.fontSize=(16+Math.random()*22)+'px';
+    el.style.animationDuration=(3.5+Math.random()*2.5)+'s';
+    document.body.appendChild(el); setTimeout(()=>el.remove(),6200);
+  }
+}
+$('surpriseBtn').addEventListener('click',()=>{
+  $('surprise').classList.remove('hidden');
+  $('surpriseBtn').textContent='A little birthday wish, just for you ♡';
+  floatHearts(34);
+});
+
+const reveals=document.querySelectorAll('.reveal');
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+reveals.forEach(e=>io.observe(e));
+
+$('decode').addEventListener('click',()=>{
+  $('meter').style.width='100%';
+  $('caseStatus').textContent='Status: decrypted ✓';
+  $('decoded').classList.remove('hidden');
+  $('decode').textContent='Signal unlocked ✦';
+  floatHearts(18);
+});
+
+function drop(btn,msg){
+  btn.querySelector('span').textContent=msg;
+  btn.querySelector('b').textContent='UNLOCKED ✦';
+  btn.style.cursor='default';
+  floatHearts(6);
+}
+
+</script>
+</body>
+</html>
